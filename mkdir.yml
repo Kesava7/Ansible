@@ -1,0 +1,16 @@
+---
+- name: create directory
+  hosts: localhost
+  vars:
+    dir: /tmp/
+  tasks:
+    - name: directory
+      file:
+        path: { dir/www}
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: 0775
+      register: file
+        - debug:
+            msg: "{ file: {file.dest.out}}"
