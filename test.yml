@@ -4,4 +4,4 @@
   tasks:
     - name: user add
       debug:
-        msg: " test github "
+        msg: " test github pulltest "
