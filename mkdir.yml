@@ -1,12 +1,10 @@
 ---
 - name: create directory
   hosts: localhost
-  vars:
-    dir: /tmp/
   tasks:
     - name: directory
       file:
-        path: { dir/www}
+        path: /tmp/www
         state: directory
         owner: www-data
         group: www-data
