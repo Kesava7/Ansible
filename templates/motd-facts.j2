@@ -3,6 +3,9 @@ IP Addresses {{ ansible_all_ipv4_addresses }}
 {{ ansible_distribution }} {{ ansible_distribution_version}}
 processor_cores {{ ansible_processor_cores }}
 processor_count {{ ansible_processor_count }}
+ansible_memfree GB {{ ansible_memfree_mb | int }}/1024
+ansible_memtotal_mb {{ ansible_memtotal_mb | int }}/1024
+ansible_real_memory_Gb {{ ansible_memory_mb.nocache.free| int }}/1024
 ansible_processor_vcpus {{ ansible_processor_vcpus }}
 deployed on {{ ansible_architecture }} architecture.
 running kernel {{ ansible_kernel }}
