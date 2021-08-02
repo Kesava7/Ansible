@@ -1,0 +1,11 @@
+---
+- name: Fill motd file with host data
+  hosts: localhost
+  tasks:
+    - template:
+        src: motd-facts.j2
+        dest: "/var/run/motd.dynamic"
+        state: present
+        owner: root
+        group: root
+        mode: 0644

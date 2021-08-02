@@ -1,7 +1,0 @@
----
-- name: test github
-  hosts: localhost
-  tasks:
-    - name: user add
-      debug:
-        msg: " another test for captain"

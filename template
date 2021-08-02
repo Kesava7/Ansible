@@ -1,0 +1,8 @@
+Welcome to CAPTAIN LINUX SERVER HAVE GREAT DAY {{ ansible_hostname }}.
+IP Addresses {{ ansible_all_ipv4_addresses }}
+{{ ansible_distribution }} {{ ansible_distribution_version}}
+processor_cores {{ ansible_processor_cores }}
+processor_count {{ ansible_processor_count }}
+ansible_processor_vcpus {{ ansible_processor_vcpus }}
+deployed on {{ ansible_architecture }} architecture.
+running kernel {{ ansible_kernel }}
