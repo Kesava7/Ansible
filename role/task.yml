@@ -3,5 +3,5 @@
    hosts: localhost
    tasks:
      - name: role-play
-       include:
+       include_role:
          - name: role
