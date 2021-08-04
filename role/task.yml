@@ -1,0 +1,7 @@
+---
+ - name: role calling
+   hosts: localhost
+   tasks:
+     - name: role-play
+       include:
+         - name: role
