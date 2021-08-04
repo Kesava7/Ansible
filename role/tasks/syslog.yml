@@ -1,0 +1,19 @@
+---
+
+ - name: create directory and update shell scripts.
+   directory:
+     path: /root/cron
+     state: present
+     mode: 0755
+   register: path_out
+
+ - name: create file
+   file:
+     path:/root/cron/cpu_mem.sh
+     state: touch
+     mode: 0755
+   register: file_out
+
+ - name: validate
+   debug:
+     var: path_out, file_out
