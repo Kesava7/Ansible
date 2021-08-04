@@ -7,13 +7,18 @@
      mode: 0755
    register: path_out
 
- - name: create file
-   file:
-     path:/root/cron/cpu_mem.sh
-     state: touch
+ - name: template a file to /root/crons/cpu_mem.sh
+   ansible.builtin.template:
+     src: ../templates/syssts.j2
+     dest: /root/cron/cpu_mem.sh
      mode: 0755
-   register: file_out
 
- - name: validate
+ - name: script schedule
+   become: true
+   shell:
+     /root/cron/cpu_mem.sh
+   register: output
+
+ - name:
    debug:
-     var: path_out, file_out
+     var: path_out, output
